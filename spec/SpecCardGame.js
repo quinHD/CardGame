@@ -11,5 +11,17 @@ describe("In the highest card game", function() {
 		expect(whoWins(['1'],['1'])).
 			toBe("Tie");
 	});
+
+	it("may stop the game if the hands are empty", function() {
+		expect(function (){whoWins([''],[''])}).
+			toThrow("Invalid input");
+		expect(whoWins([],[])).
+			toBe("throw Error ('Invalid input')");
+	});
+
+	/*it("may stop the game if the hands are wrong", function() {
+		expect(whoWins(['1'],['1'])).
+			toBe("Tie");
+	});*/
 });
 
