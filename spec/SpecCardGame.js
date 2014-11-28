@@ -19,9 +19,9 @@ describe("In the highest card game", function() {
 			toThrow("Invalid input");
 	});
 
-	/*it("may stop the game if the hands are wrong", function() {
-		expect(whoWins(['1'],['1'])).
-			toBe("Tie");
-	});*/
+	it("may stop the game if the hands are wrong", function() {
+		expect(function (){whoWins(['1'],['1','2'])}).
+			toThrow("Invalid input");
+	});
 });
 

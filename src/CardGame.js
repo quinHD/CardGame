@@ -1,8 +1,10 @@
 function whoWins(hand1, hand2) {
-	if(handHasCards(hand1) && handHasCards(hand2))
+	if(handHasCards(hand1) && handHasCards(hand2)) {
 		return (existsWinner(hand1, hand2) ||	isTie(hand1, hand2));
-	else
+	}
+	else {
 		throw 'Invalid input'
+	}
 
 }
 
