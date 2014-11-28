@@ -25,7 +25,7 @@ describe("In the highest card game", function() {
 	});
 
 	it("may have a winner with two rounds", function() {
-		expect(whoWins(['9','6'], ['J','Q'])).
+		expect(whoWins(['J','6'], ['J','Q'])).
 			toBe("Player2 wins 1 to 0");
 	});
 });
