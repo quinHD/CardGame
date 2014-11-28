@@ -1,11 +1,10 @@
 function whoWins(hand1, hand2) {
-	if(handHasCards(hand1) && handHasCards(hand2)) {
+	if(handHasCards(hand1) && handHasCards(hand2) && hand1.length === hand2.length) {
 		return (existsWinner(hand1, hand2) ||	isTie(hand1, hand2));
 	}
 	else {
 		throw 'Invalid input'
 	}
-
 }
 
 function existsWinner(hand1, hand2) {
