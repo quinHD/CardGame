@@ -22,11 +22,15 @@ describe("In the highest card game", function() {
 	it("may stop the game if the hands are wrong", function() {
 		expect(function (){whoWins(['1'],['1','2'])}).
 			toThrow("Invalid input");
+		expect(function (){whoWins(['1'],['Ñ'])}).
+			toThrow("Invalid input");
 	});
 
 	it("may have a winner with two rounds", function() {
 		expect(whoWins(['J','6'], ['J','Q'])).
 			toBe("Player2 wins 1 to 0");
+		expect(whoWins(['7','6'], ['5','1'])).
+			toBe("Player1 wins 2 to 0");
 	});
 });
 

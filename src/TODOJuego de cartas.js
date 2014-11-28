@@ -17,6 +17,7 @@ Input -> Output
  f(['1'], ['1']) 		 -> "Tie"
  f(['2'], ['1']) 		 -> "Player1 wins 1 to 0"
  f([''], ['']) 			 -> throw Error ('Invalid input')
+ f(['1'], ['Ñ']) 			 -> throw Error ('Invalid input')
  f(['1'], ['1','2']) 	 -> throw Error ('Invalid input')
  f(['9','6'], ['J','Q']) -> "Player2 wins 2 to 0"
  f(['9','6'], ['5','Q']) -> "Tie"
