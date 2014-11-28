@@ -1,12 +1,12 @@
 function whoWins(hand1, hand2) {
-	if(( hand1[0] != '') && (hand2[0] != ''))
-		return (winner(hand1, hand2) ||	tie(hand1, hand2));
+	if(handHasCards(hand1) && handHasCards(hand2))
+		return (existsWinner(hand1, hand2) ||	isTie(hand1, hand2));
 	else
 		throw 'Invalid input'
 
 }
 
-function winner(hand1, hand2) {
+function existsWinner(hand1, hand2) {
 	if(hand1[0] > hand2[0]) {
 		return "Player1 wins 1 to 0"
 	} 
@@ -15,9 +15,17 @@ function winner(hand1, hand2) {
 	}
 }
 
-function tie(hand1, hand2) {
+function isTie(hand1, hand2) {
 	if(hand1[0] === hand2[0])
 	{
 		return "Tie"
 	}
+}
+
+function handHasCards(hand)
+{
+	if((hand.length >0) && (hand[0] != ''))
+		return true
+	else
+		return false
 }

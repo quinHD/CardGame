@@ -15,8 +15,8 @@ describe("In the highest card game", function() {
 	it("may stop the game if the hands are empty", function() {
 		expect(function (){whoWins([''],[''])}).
 			toThrow("Invalid input");
-		expect(whoWins([],[])).
-			toBe("throw Error ('Invalid input')");
+		expect(function (){whoWins([],[])}).
+			toThrow("Invalid input");
 	});
 
 	/*it("may stop the game if the hands are wrong", function() {
